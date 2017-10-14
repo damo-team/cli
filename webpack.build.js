@@ -36,7 +36,7 @@ module.exports = function buildWebpackConfig() {
           exclude: /(node_modules|bower_components)/,
           query: {
             cacheDirectory: true, // 对文件进行缓存，修改代码时，可以减少重新编译的时间
-            presets: ['es2015'], // babel6中的es6语法编译插件，但是Babel@6 doesn't export default module.exports any more
+            presets: ['env'], // babel6中的es6语法编译插件，但是Babel@6 doesn't export default module.exports any more
             plugins: ["add-module-exports", "transform-object-rest-spread"], // 支持es6的中的export default
             filename: __filename // 临时解决因为presets获取es2015，默认进了项目目录的问题。通过强制指定filename到naza目录来解决
           }
