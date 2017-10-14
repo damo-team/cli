@@ -1,0 +1,8 @@
+body{
+  -webkit-filter: blur(1px);
+  filter: blur(1px);
+  -webkit-filter: progid\:DXImageTransform\.Microsoft\.Blur(PixelRadius\=1, MakeShadow\=false);
+          filter: progid\:DXImageTransform\.Microsoft\.Blur(PixelRadius\=1, MakeShadow\=false);
+  /* IE6~IE9 */
+  pointer-events: none;
+}

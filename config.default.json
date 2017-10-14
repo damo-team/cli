@@ -1,0 +1,12 @@
+{
+    "version": "0.0.1",
+    "name": "demo-cli",
+    "base": "/",
+    "index": "./src/index.html",
+    "main": "./src/app.js",
+    "server": {
+      "host": "http://localhost:8009"
+    },
+    "quiet": true
+  }
+  
