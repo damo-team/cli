@@ -1,6 +1,6 @@
 {
   "version": "0.0.1",
-  "name": "@damo/cli",
+  "name": "damo-cli",
   "author": {
     "name": "baqian <st403471258@gmail.com>"
   },
@@ -15,10 +15,11 @@
     "damo": "./bin/cli"
   },
   "dependencies": {
-    "@damo/cli-docco-plugin": "~0.1.3",
-    "@damo/cli-extract-plugin": "~0.0.3",
-    "@damo/cli-html-plugin": "~0.0.4",
-    "@damo/cli-l20n-loader": "~0.3.7",
+    "damo-cli-extract-plugin": "lastest",
+    "damo-cli-l20n-loader": "lastest",
+    "damo-cli-html-plugin": "lastest",
+    "damo-cli-docco-plugin": "lastest",
+
     "assets-webpack-plugin": "~3.5.1",
     "babel-core": "~6.13.2",
     "babel-loader": "~6.4.1",
@@ -64,6 +65,21 @@
     "webpack-core": "~0.6.0",
     "webpack-dev-server": "~1.14.1",
     "webpack-stats-plugin": "~0.1.1"
+  },
+  "homepage": "https://github.com/damo-team/cli",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/damo-team/cli.git"
+  },
+  "readmeFilename": "README.md",
+  "maintainers": [
+    {
+      "name": "baqian",
+      "email": "st403471258@gmail.com"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/damo-team/cli/issues"
   },
   "license": "MIT"
 }

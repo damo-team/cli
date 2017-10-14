@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "name": "webpack-angular",
-  "base": "/demo",
+  "base": "/boilerplate",
   "index": "index.html",
   "main": "app.js",
   "server": {
@@ -11,7 +11,7 @@
     "app": "app"
   },
   "profile": {
-    "dll": "demo"
+    "dll": "dll"
   },
   "vendors": ["angular", "@damo/l20n/dist/ng/1.0.0/l20n"],
   "devtool": "#cheap-source-map",
