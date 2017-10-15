@@ -22,7 +22,6 @@ module.exports = {
     }
     var configPath = process.env.CONFIG_PATH;
     var defaultConfigFileName = process.env.CONFIG_FILE || 'config.dev.json';
-
     var proPkgPath, stats;
     if (configPath) {
       stats = fs.statSync(configPath);

@@ -1,10 +1,8 @@
 import React, {Component, PropTypes} from "react";
 import ReactDOM from 'react-dom';
-import  './index.less';
+import  './app.less';
 
 export default class Root extends Component{
-    static routePath = '/';
-    
     static propTypes = {
         title: PropTypes.string.isRequired
     }
@@ -19,3 +17,8 @@ export default class Root extends Component{
             </div>)
     }
 }
+
+ReactDOM.render(
+  (<Root/>),
+  document.getElementById('container')
+);

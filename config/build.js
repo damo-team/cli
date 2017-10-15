@@ -4,7 +4,7 @@ var loadAddons = require('./addon/index');
 var helper = require('./helper');
 var webpack = require("webpack");
 var Clean = require('../lib/clean');
-var HtmlWebpackPlugin = require('@damo/cli-html-plugin');
+var HtmlWebpackPlugin = require('damo-cli-html-plugin');
 var ngAnnotatePlugin = require('ng-annotate-webpack-plugin');
 const AssetsPlugin = require('assets-webpack-plugin');
 

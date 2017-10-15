@@ -1,4 +1,4 @@
-var DoccoPlugin = require('@damo/cli-docco-plugin');
+var DoccoPlugin = require('damo-cli-docco-plugin');
 module.exports = function(pkg, webpackOptions){
   return function(webpackOptions){
     if(pkg.docco){

@@ -1,7 +1,7 @@
 var loadAddons = require('./addon/index');
 var helper = require('./helper');
 var webpack = require("webpack");
-var HtmlWebpackPlugin = require('@damo/cli-html-plugin');
+var HtmlWebpackPlugin = require('damo-cli-html-plugin');
 var _ = require('lodash');
 var path = require('path');
 
@@ -169,14 +169,13 @@ module.exports = {
       webpackOptions[0].profile = pkg.profile;
       var dllPath = profilePath.split('/').slice(0, -1).join('/') + '/profile';
       profilePath = webpackOptions[0].profile.path = path.join('.', pkg.base, dllPath);
-      
       if(pkg.profile.assets){
         webpackOptions[0].plugins.push(new AssetsPlugin({ filename: pkg.profile.assets, path: profilePath }));
       }
       // #! dll
       if(pkg.profile.dll){
-        webpackOptions[0].profile.dllPath = dllPath;
-        var dllFile = path.join(dllPath.split('/').slice(0, -1).join('/') + '/profile', `${pkg.profile.dll}-dll.js`);
+        webpackOptions[0].profile.dllPath = webpackOptions[0].profile.dllPath || dllPath;
+        var dllFile = path.join(webpackOptions[0].profile.dllPath, `${pkg.profile.dll}-dll.js`);
         if(pkg.files.js){
           pkg.files.js.push(dllFile)
         }else{

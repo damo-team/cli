@@ -1,4 +1,4 @@
-var l20nWebpckBlock = require('@damo/cli-l20n-loader/webpack-block');
+var l20nWebpckBlock = require('damo-cli-l20n-loader/webpack-block');
 
 module.exports = function(pkg, webpackOptions){
   return function(webpackOptions){

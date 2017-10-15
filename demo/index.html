@@ -1,32 +1,11 @@
 <!DOCTYPE>
-<html ng-app="testApp" lang="{{ locale }}">
+<html>
  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Naza Server Test Demo</title>
-    <style>
-      div {
-          margin: 20px 0;
-      }
-      div[data-l20n="data.overlayed"] > strong::after {
-          content: attr(data-result);
-      }
-    </style>
+    <title>My First App</title>
  </head>
  <body>
-    <p data-l20n="{{ l20nId }}"></p>
-    <input type="number" ng-model="data.objectsNum">
-
-    <div>
-        <a href="#" ng-show="locale !== 'en-US'" ng-click="changeLocale('zh-CN')">Chinese version</a>
-        <a href="#" ng-show="locale !== 'zh-CN'" ng-click="changeLocale('en-US')">English version</a>
-    </div>
-
-    <div data-l20n="data.overlayed">
-        <strong data-result=" (Attribute: {{ data.testNumber }}) "></strong>
-        <input type="number" ng-model="data.testNumber">
-    </div>
-    
     <div id="container"></div>
  </body>
 </html>

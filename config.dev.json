@@ -1,24 +1,22 @@
 {
   "version": "1.0.0",
-  "name": "webpack-angular",
-  "base": "/boilerplate",
-  "index": "index.html",
-  "main": "app.js",
+  "name": "Damo",
+  "base": "/demo",
+  "index": "/index.html",
+  "main": "app.jsx",
   "server": {
     "host": "http://localhost:8009"
   },
+  "jsx": true,
   "output": {
     "app": "app"
   },
   "profile": {
     "dll": "dll"
   },
-  "vendors": ["angular", "@damo/l20n/dist/ng/1.0.0/l20n"],
+  "vendors": ["react", "react-dom"],
   "devtool": "#cheap-source-map",
-  "locals": {
-    "available": ["en-US", "zh-CN"],
-    "default": "zh-CN",
-    "form": "properties",
-    "to": "json"
+  "partition": {
+    "NODE_ENV": "development"
   }
 }

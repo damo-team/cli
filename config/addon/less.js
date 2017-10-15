@@ -1,4 +1,4 @@
-var ExtractTextPlugin = require('@damo/cli-extract-plugin');
+var ExtractTextPlugin = require('damo-cli-extract-plugin');
 
 module.exports = function(pkg, webpackOptions) {
 
