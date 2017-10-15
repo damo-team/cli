@@ -2,7 +2,7 @@
     "version": "0.0.1",
     "name": "Damo App",
     "index": "index.html",
-    "main": "/app/app.jsx",
+    "main": "./app/app.jsx",
     "output": {
       "path": "build",
       "version": "",

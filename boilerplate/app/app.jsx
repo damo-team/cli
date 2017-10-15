@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {autoLoadStore, autoLoadScenesRoutes} from 'damo-core';
+import {errorReducer, AppModal} from 'damo-antd';
 import {Router, Redirect, Route, IndexRedirect, browserHistory} from 'react-router';
 
 import Root from './scenes';
@@ -31,7 +32,10 @@ const rootRoute = [{
 ReactDOM.render(
   (
     <Provider store={store}>
-      <Router history={browserHistory} routes={rootRoute}/>
+      <div>
+        <Router history={browserHistory} routes={rootRoute}/>
+        <AppModal/>
+      </div>
     </Provider>
   ),
   document.getElementById('container')

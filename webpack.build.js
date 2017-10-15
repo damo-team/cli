@@ -85,6 +85,9 @@ module.exports = function buildWebpackConfig() {
   var compiler = webpack(webpackOptions);
   webpackRunner(compiler.compilers[0], webpackOptions[0], true);
   compiler.run(function(err) {
-    if (err) throw err;
+    if (err){
+      console.log(err);
+      throw err;
+    }
   });
 };

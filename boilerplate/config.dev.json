@@ -1,50 +1,50 @@
 {
-    "version": "0.0.1",
-    "name": "Damo App",
-    "index": "index.html",
-    "main": "/app/app.jsx",
-    "server": {
-      "host": "http://localhost:8009"
-    },
-    "jsx": true,
-    "output": {
-      "app": "app",
-      "vendor": "vendor"
-    },
-    "vendors": [
-      "react", 
-      "react-dom",
-      "react-router",
-      "redux",
-      "react-redux",
-      "react-router-redux",
-      "redux-logger",
-      "redux-thunk",
-      "hoist-non-react-statics",
-      "isomorphic-fetch",
-      "cuid",
-      "recompose",
-      "reselect",
-      "rxjs",
-      "events",
-      "seamless-immutable",
-      "moment",    
-      "redux-promise-middleware",
-      "react-redux-loading-bar",
+  "version": "0.0.1",
+  "name": "Damo App",
+  "index": "index.html",
+  "main": "./app/app.jsx",
+  "server": {
+    "host": "http://localhost:8009"
+  },
+  "jsx": true,
+  "output": {
+    "app": "app",
+    "vendor": "vendor"
+  },
+  "vendors": [
+    "react", 
+    "react-dom",
+    "react-router",
+    "redux",
+    "react-redux",
+    "react-router-redux",
+    "redux-logger",
+    "redux-thunk",
+    "hoist-non-react-statics",
+    "isomorphic-fetch",
+    "cuid",
+    "recompose",
+    "reselect",
+    "rxjs",
+    "events",
+    "seamless-immutable",
+    "moment",    
+    "redux-promise-middleware",
+    "react-redux-loading-bar",
 
-      "damo-core",
-      "damo-antd"
-    ],
-    "provide": {
-      "React": "react",
-      "ReactDOM": "react-dom"
-    },
-    "devtool": "#cheap-source-map",
-    "partition": {
-      "NODE_ENV": "development"
-    },
-    "proxy": [{
-      "host": "http://api.github.com/",
-      "routes": [ "*" ]
-    }]
-  }
+    "damo-core",
+    "damo-antd"
+  ],
+  "provide": {
+    "React": "react",
+    "ReactDOM": "react-dom"
+  },
+  "devtool": "#cheap-source-map",
+  "partition": {
+    "NODE_ENV": "development"
+  },
+  "proxy": [{
+    "host": "http://api.github.com/",
+    "routes": [ "/repo" ]
+  }]
+}
