@@ -9,6 +9,7 @@
       "app": "app",
       "vendor": "vendor"
     },
+    "jsx": true,
     "vendors": [
       "react", 
       "react-dom",
