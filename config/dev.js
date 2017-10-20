@@ -44,8 +44,8 @@ module.exports = {
     if (pkg.vendors && pkg.vendors.length) {
       this.addons.unshift(function(webpackOptions) {
         webpackOptions[0].module.loaders.forEach(function(loader) {
-          if (loader.test.toString().indexOf('.js') > -1) {
-            loader.exclude = new RegExp(pkg.vendors.map(function(v){return '\/' + v + '\/'}).concat(['node_modules', 'bower_components']).join('|'))
+          if (loader.test.toString().indexOf('.js') > -1 && loader.test.toString().indexOf('.json') === -1) {
+            loader.exclude = new RegExp(pkg.vendors.map(function(v){return '\/' + v + '\/'}).concat(pkg.exclude || ['node_modules', 'bower_components']).join('|'))
             return false;
           }
         });

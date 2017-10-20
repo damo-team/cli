@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import  './index.less';
 
 export default class Root extends Component{
-    static routePath = '/';
     
     static propTypes = {
         title: PropTypes.string.isRequired
