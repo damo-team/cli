@@ -37,14 +37,14 @@ module.exports = function(pkg, webpackOptions){
     });
     
     
-    // if(!pkg.__build__){
-    //   if(typeof webpackOptions[0].entry.app === 'array'){
-    //     webpackOptions[0].entry.app.splice(0, 0, 'webpack-dev-server/client?' + pkg.server.host, 'webpack/hot/only-dev-server');
-    //   }else{
-    //     webpackOptions[0].entry.app = ['webpack-dev-server/client?' + pkg.server.host, 'webpack/hot/only-dev-server', webpackOptions[0].entry.app];
-    //   }
-    //   webpackOptions[0].plugins.push(new webpack.HotModuleReplacementPlugin());
-    // }
+    if(!pkg.__build__ && pkg.hot){
+      if(typeof webpackOptions[0].entry.app === 'array'){
+        webpackOptions[0].entry.app.splice(0, 0, 'webpack-dev-server/client?' + pkg.server.host, 'webpack/hot/only-dev-server');
+      }else{
+        webpackOptions[0].entry.app = ['webpack-dev-server/client?' + pkg.server.host, 'webpack/hot/only-dev-server', webpackOptions[0].entry.app];
+      }
+      webpackOptions[0].plugins.push(new webpack.HotModuleReplacementPlugin());
+    }
     
     // webpackOptions[0].plugins.unshift(new webpack.PrefetchPlugin("react/lib/ReactComponentBrowserEnvironment"));
     webpackOptions[0].plugins.unshift(new webpack.PrefetchPlugin("react"));
