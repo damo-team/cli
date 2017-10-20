@@ -107,7 +107,7 @@ module.exports = function devWebpackConfig() {
       colors: true,
       chunk: false
     },
-    hot: pkg.hot, //启动热部署
+    hot: process.env.HOT, //启动热部署
     historyApiFallback: true, //容错
     proxy: proxyObj.proxy, //代理
     headers: proxyObj.headers, //http 头部

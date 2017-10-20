@@ -37,7 +37,7 @@ module.exports = function(pkg, webpackOptions){
     });
     
     
-    if(!pkg.__build__ && pkg.hot){
+    if(!pkg.__build__ && process.env.HOT){
       if(typeof webpackOptions[0].entry.app === 'array'){
         webpackOptions[0].entry.app.splice(0, 0, 'webpack-dev-server/client?' + pkg.server.host, 'webpack/hot/only-dev-server');
       }else{
