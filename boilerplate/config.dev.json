@@ -12,7 +12,7 @@
     "vendor": "vendor"
   },
   "vendors": [
-    "react", 
+    "react",
     "react-dom",
     "react-router",
     "redux",
@@ -28,12 +28,11 @@
     "rxjs",
     "events",
     "seamless-immutable",
-    "moment",    
+    "moment",
     "redux-promise-middleware",
     "react-redux-loading-bar",
-
     "damo-core",
-    "damo-antd"
+    "damo-cntd"
   ],
   "provide": {
     "React": "react",
@@ -43,8 +42,12 @@
   "partition": {
     "NODE_ENV": "development"
   },
-  "proxy": [{
-    "host": "http://api.github.com/",
-    "routes": [ "/repo" ]
-  }]
+  "proxy": [
+    {
+      "host": "http://api.github.com/",
+      "routes": [
+        "/repo"
+      ]
+    }
+  ]
 }
