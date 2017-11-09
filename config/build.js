@@ -100,7 +100,7 @@ module.exports = {
       filename: output.path + '/' + output.app + '.js'
     }
     if(pkg.vendors && pkg.vendors.length) {
-      webpackOptions[0].output["chunkFilename"] = output.path + '/' + output.vendor + '.js';
+      webpackOptions[0].output["chunkFilename"] = output.path + '/[name].js';
     }
     if(pkg.externals){
       webpackOptions[0].externals = pkg.externals.map(function(item){

@@ -18,7 +18,7 @@ module.exports = {
   addons: [],
   //使用jshint、less、l20n扩展，具体有没有使用，看addon/
   loadAddons: function(pkg, webpackOptions) {
-    this.addons = loadAddons(pkg, webpackOptions, ['jsx', 'jshint', 'less', 'l20n']);
+    this.addons = loadAddons(pkg, webpackOptions, ['tsx', 'jsx', 'jshint', 'less', 'l20n']);
   },
   //1. vendors的内容加入noParse
   //2. entry输入
@@ -136,6 +136,14 @@ module.exports = {
       caller(webpackOptions);
     });
 
+    if(pkg.hot && process.env.HOT){
+      if(typeof webpackOptions[0].entry.app === 'array'){
+        webpackOptions[0].entry.app.splice(0, 0, 'webpack-dev-server/client?' + pkg.server.host, 'webpack/hot/only-dev-server');
+      }else{
+        webpackOptions[0].entry.app = ['webpack-dev-server/client?' + pkg.server.host, 'webpack/hot/only-dev-server', webpackOptions[0].entry.app];
+      }
+      webpackOptions[0].plugins.push(new webpack.HotModuleReplacementPlugin());
+    }
     //definePulgins
     // see: http://tech.vg.no/2015/11/13/be-environment-aware/
     if(pkg.partition){

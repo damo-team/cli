@@ -1,5 +1,5 @@
 {
-  "version": "0.0.9",
+  "version": "0.0.10",
   "name": "damo-cli",
   "author": {
     "name": "baqian <st403471258@gmail.com>"
@@ -71,7 +71,15 @@
   },
   "devDependencies": {
     "react": "^15.4.1",
-    "react-dom": "^15.4.1"
+    "react-dom": "^15.4.1",
+    "@types/react": "^16.0.1",
+    "@types/react-dom": "^15.5.2",
+    "@types/react-hot-loader": "^3.0.3",
+    "@types/react-redux": "^4.4.47",
+    "@types/redux-actions": "^1.2.7",
+    "@types/redux-devtools": "^3.0.38",
+    "@types/redux-mock-store": "^0.0.9",
+    "@types/webpack": "^3.0.6"
   },
   "homepage": "https://github.com/damo-team/cli",
   "repository": {
