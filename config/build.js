@@ -195,20 +195,22 @@ module.exports = {
 
     //definePulgins
     // see: http://tech.vg.no/2015/11/13/be-environment-aware/
-    if(pkg.partition){
-      for(var k in pkg.partition){
-        if(typeof pkg.partition[k] === 'string'){
-          pkg.partition[k] = JSON.stringify(pkg.partition[k]);
+    if(pkg.partition !== false){
+      if(pkg.partition){
+        for(var k in pkg.partition){
+          if(typeof pkg.partition[k] === 'string'){
+            pkg.partition[k] = JSON.stringify(pkg.partition[k]);
+          }
+        }
+      }else{
+        pkg.partition = {
+          'NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production')
         }
       }
-    }else{
-      pkg.partition = {
-        'NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production')
-      }
+      webpackOptions[0].plugins.push(new webpack.DefinePlugin({
+        'process.env': pkg.partition
+      }));
     }
-    webpackOptions[0].plugins.push(new webpack.DefinePlugin({
-      'process.env': pkg.partition
-    }));
     
     if(pkg.profile){
       // var StatsWriterPlugin = require('webpack-stats-plugin').StatsWriterPlugin;
